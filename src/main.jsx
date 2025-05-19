@@ -8,11 +8,18 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Root from './components/Layout/Root.jsx';
+import Home from './components/Home/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+    children:[
+      {
+        path:'/',
+        element:<Home/>
+      }
+    ]
   },
 ]);
 
